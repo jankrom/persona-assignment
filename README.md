@@ -113,6 +113,14 @@ Provider-specific logic stays inside integration adapters. The agent consumes no
 
 Chat and Inbox use the same agent runtime, memory, and tools.
 
+### Tech Stack
+
+The demo will use:
+
+- Next.js for the frontend and backend of the web application
+- React for the UI
+- Convex for the database, persistent application state, and real-time updates
+
 ---
 
 ## 2. Goals
