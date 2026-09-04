@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "properties": {
+    "importance": { "type": "number", "minimum": 0, "maximum": 1 },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "urgency": { "type": "number", "minimum": 0, "maximum": 1 },
+    "reason": { "type": "string" },
+    "message": { "type": "string" }
+  },
+  "required": ["importance", "confidence", "urgency", "reason", "message"],
+  "additionalProperties": false
+}

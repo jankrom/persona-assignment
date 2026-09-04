@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "importance": { "type": "number", "minimum": 0, "maximum": 1 },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+    "urgency": { "type": "number", "minimum": 0, "maximum": 1 },
+    "reason": { "type": "string" },
+    "message": { "type": "string" },
+    "proposedAction": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "integrationId": { "type": "string", "enum": ["gmail", "calendar", "doordash"] },
+            "type": { "type": "string" },
+            "summary": { "type": "string" },
+            "parametersJson": { "type": "string" }
+          },
+          "required": ["integrationId", "type", "summary", "parametersJson"],
+          "additionalProperties": false
+        },
+        { "type": "null" }
+      ]
+    }
+  },
+  "required": ["importance", "confidence", "urgency", "reason", "message", "proposedAction"],
+  "additionalProperties": false
+}

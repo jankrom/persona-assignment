@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "reply": { "type": "string" },
+    "learnedPreference": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+    "toolLabel": { "anyOf": [{ "type": "string" }, { "type": "null" }] },
+    "proposedAction": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "integrationId": { "type": "string", "enum": ["calendar"] },
+            "type": { "type": "string", "enum": ["create_event"] },
+            "summary": { "type": "string" },
+            "parametersJson": { "type": "string" }
+          },
+          "required": ["integrationId", "type", "summary", "parametersJson"],
+          "additionalProperties": false
+        },
+        { "type": "null" }
+      ]
+    }
+  },
+  "required": ["reply", "learnedPreference", "toolLabel", "proposedAction"],
+  "additionalProperties": false
+}

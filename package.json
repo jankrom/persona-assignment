@@ -1,0 +1,9 @@
+{
+  "name": "persona-proactive-agent",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --dir proactive-agent-hub dev",
+    "typecheck": "pnpm --dir proactive-agent-hub typecheck",
+    "lint": "pnpm --dir proactive-agent-hub lint"
+  }
+}
